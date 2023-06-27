@@ -1,0 +1,19 @@
+{
+  "name": "cf-worker-template",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "dev:prod": "wrangler dev src/index.ts --env prod",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "deploy:prod": "wrangler deploy --minify src/index.ts --env prod"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.27.0",
+    "hono": "^3.2.6"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230518.0",
+    "drizzle-kit": "^0.19.2",
+    "typescript": "^5.1.3",
+    "wrangler": "^3.1.1"
+  }
+}

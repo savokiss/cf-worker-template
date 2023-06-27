@@ -1,0 +1,15 @@
+name = "api-dev"
+main = "src/index.ts"
+compatibility_date = "2023-01-01"
+
+routes = [{ pattern = "worker.example.dev", custom_domain = true }]
+d1_databases = [{ binding = "D1_DB", database_name = "db-dev", database_id = "xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx" }]
+services = [{ binding = "my_service", service = "service_worker" }]
+vars = { ENVIRONMENT = "dev" }
+
+[env.production]
+name = "api-prod"
+routes = [{ pattern = "worker.example.prod", custom_domain = true }]
+d1_databases = [{ binding = "D1_DB", database_name = "db-prod", database_id = "xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx" }]
+services = [{ binding = "my_service", service = "service_worker" }]
+vars = { ENVIRONMENT = "prod" }
